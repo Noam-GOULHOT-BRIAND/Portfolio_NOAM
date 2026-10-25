@@ -1,0 +1,807 @@
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+*{
+    margin:0;
+    padding:0; 
+}
+
+body{
+    font-family: 'Tinos',sans-serif;
+}
+
+.slider{
+    width:100%;
+    height:80vh;
+    position: relative;
+}
+
+.slider-background{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    filter:brightness(40%)
+}
+
+.slider-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align:center;
+}
+
+h1{
+    color: white;
+    font-size: 60px;
+}
+
+p{
+    font-size: 1.5rem;
+    line-height: 1.5em;
+}
+h2{
+    font-size: 50px;
+}
+.slider-content p{
+    color: white;
+    font-size: 1rem;
+}
+
+.section{
+    padding: 100px 0 ;
+}
+
+.boxed{
+    max-width: 1260px;
+    margin-inline:auto;
+}
+
+.dark{
+    background:black ;
+    color: #FFF;
+}
+
+.text-center{
+    text-align:center;
+}
+
+.section.dark h2{
+    margin-bottom: 60px;
+}
+
+.section.dark h3{
+    color:#FFF;
+    font-size: 26px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.w25{
+    width: 25%;
+}
+
+.w32{
+    width: 32%;
+}
+
+.space-between{
+    justify-self:space-between ;
+}
+
+.gap20{
+    gap: 20px;
+}
+
+.skill{
+    background:#333 ;
+    border-radius:15px ;
+    padding: 20px;
+    text-align: center;
+    box-sizing:border-box ;
+
+}
+
+.skill img{
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px;
+
+}
+
+.skill h4{
+    color: #FFF;
+    font-size: 18px;
+    margin: 0;
+}
+
+.project{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    align-items: stretch;
+}
+
+
+
+.projets-section {
+    background-color: white;
+    color: black;
+}
+
+.titre-projets {
+    font-size: 50px;
+    text-decoration: underline;
+    margin-bottom: 40px;
+}
+
+.realisation {
+    width: calc((100% - 60px) / 3);
+    background-color: #f5f5f5;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Images des projets */
+
+.realisation img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Date du projet */
+
+.date-projet {
+    color: #a28b79;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+/* Titre du projet */
+
+.realisation h3 {
+    color: #a28b79;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+/* Description */
+
+.description-projet {
+    color: black;
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* BARRE DE NAVIGATION */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 220px;
+    height: 100vh;
+    padding: 25px 15px;
+    box-sizing: border-box;
+
+    background-color: #111827;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+/* LOGO ET TITRE */
+
+.sidebar-logo {
+    padding: 10px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #334155;
+}
+
+.sidebar-logo h2 {
+    font-size: 26px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.sidebar-logo p {
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+/* LIENS */
+
+.sidebar a {
+    display: block;
+    padding: 13px 15px;
+
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 16px;
+
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* SURVOL */
+
+.sidebar a:hover {
+    background-color: #2563eb;
+    color: white;
+    transform: translateX(4px);
+}
+
+/* SECTION ACTIVE */
+
+.sidebar a.active {
+    background-color: #2563eb;
+    color: white;
+    font-weight: bold;
+}
+
+/* TEXTE EN BAS */
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 20px;
+
+    border-top: 1px solid #334155;
+    color: #94a3b8;
+
+    font-size: 11px;
+    text-align: center;
+}
+
+/* PLACE POUR LA BARRE */
+
+body {
+    padding-left: 220px;
+}
+
+/* DEFILEMENT FLUIDE */
+
+html {
+    scroll-behavior: smooth;
+}
+/* TITRE DU MENU */
+
+.sidebar h2 {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+/* LIENS DU MENU */
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* EFFET AU SURVOL */
+
+.sidebar a:hover {
+    background-color: #333;
+    color: #66b3ff;
+}
+
+/* DÉCALAGE DU CONTENU */
+
+body {
+    padding-left: 220px;
+}
+
+/* DÉFILEMENT FLUIDE */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.parcours{
+    background-color: white;
+    color: black;
+}
+
+.titre-parcours{
+    font-size: 45px;
+    text-decoration: underline;
+    margin-bottom: 50px;
+    border-top: 2px solid #aaa;
+    padding-top: 20px;
+}
+
+.timeline{
+    position: relative;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 30%;
+    width: 2px;
+    background-color: #999;
+}
+
+/* UNE ÉTAPE */
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    position: relative;
+    margin-bottom: 35px;
+    align-items: center;
+}
+
+/* DATES */
+
+.timeline-date {
+    text-align: right;
+    padding-right: 25px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* POINTS SUR LA LIGNE */
+
+.timeline-point {
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+
+    background-color: #777;
+    border: 3px solid white;
+
+    z-index: 1;
+}
+
+/* ENCADRÉS */
+
+.timeline-content {
+    margin-left: 25px;
+    padding: 18px 20px;
+
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* TITRE DE L'ÉTAPE */
+
+.timeline-content h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: black;
+}
+
+/* SOUS-TITRE */
+
+.timeline-content span {
+    display: block;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* DESCRIPTION */
+
+.timeline-content p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: black;
+}
+
+/* VERSION MOBILE */
+
+@media (max-width: 768px) {
+
+    .parcours .boxed {
+        padding: 0 20px;
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-item {
+        display: block;
+        padding-left: 35px;
+    }
+
+    .timeline-date {
+        text-align: left;
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .timeline-point {
+        left: 10px;
+        top: 10px;
+    }
+
+    .timeline-content {
+        margin-left: 0;
+    }
+
+    .titre-parcours {
+        font-size: 32px;
+    }
+}
+
+/* =========================
+   SECTION CERTIFICATIONS
+========================= */
+
+.certifications {
+    background-color: #000;
+    color: white;
+}
+
+/* TITRE */
+
+.titre-certifications {
+    font-size: 45px;
+    font-style: italic;
+    text-decoration: underline;
+    border-top: 2px solid #777;
+    padding-top: 25px;
+    margin-bottom: 25px;
+}
+
+/* TEXTE D'INTRODUCTION */
+
+.intro-certifications {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 35px;
+    max-width: 700px;
+    color: #ddd;
+}
+
+/* CARTE CERTIFICATION */
+
+.certification-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    background-color: #292929;
+    padding: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* LOGO */
+
+.certification-logo {
+    width: 150px;
+    height: 100px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* INFORMATIONS */
+
+.certification-infos {
+    flex: 1;
+    min-width: 0;
+}
+
+/* TITRE ET STATUT */
+
+.certification-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.certification-header h3 {
+    color: white;
+    font-size: 22px;
+}
+
+/* BADGE EN COURS */
+
+.certification-statut {
+    background-color: white;
+    color: #d32f2f;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+/* DESCRIPTION */
+
+.certification-infos p {
+    font-size: 15px;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+/* VERSION MOBILE */
+
+@media (max-width: 768px) {
+
+    .certifications .boxed {
+        padding: 0 20px;
+    }
+
+    .titre-certifications {
+        font-size: 32px;
+    }
+
+    .certification-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .certification-header {
+        flex-wrap: wrap;
+    }
+
+    .certification-logo {
+        width: 120px;
+        height: 80px;
+    }
+}
+
+/* =========================
+   SECTION CONTACT
+========================= */
+
+/* FOND NOIR */
+
+.contact {
+    background-color: #000000;
+    color: white;
+}
+
+/* TITRE CONTACT */
+
+.titre-contact {
+    color: white;
+    font-size: 45px;
+    text-decoration: underline;
+    border-top: 2px solid #777;
+    padding-top: 25px;
+    margin-bottom: 40px;
+}
+
+/* ORGANISATION DES 4 CONTACTS */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+/* CHAQUE CONTACT */
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    min-width: 0;
+}
+
+/* LOGOS */
+
+.contact-item img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* ENCADRÉS GRIS */
+
+.contact-info {
+    background-color: #303030;
+    padding: 20px;
+    border-radius: 5px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* TEXTE */
+
+.contact-info p,
+.contact-info a {
+    color: white;
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+/* EFFET AU SURVOL */
+
+.contact-info a:hover {
+    color: #66b3ff;
+    text-decoration: underline;
+}
+
+/* VERSION MOBILE */
+
+@media (max-width: 768px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-item img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .titre-contact {
+        font-size: 32px;
+    }
+}
+
+/* BOUTON LINKEDIN */
+
+.linkedin-info {
+    padding: 0;
+    overflow: hidden;
+}
+
+.linkedin-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 20px;
+    background-color: #303030;
+    color: white;
+
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+
+    transition: 0.3s ease;
+}
+
+/* ANIMATION AU SURVOL */
+
+.linkedin-btn:hover {
+    background-color: #454545;
+    color: #70b7ff;
+    transform: translateY(-3px);
+}
+
+/* FLÈCHE */
+
+.linkedin-btn span {
+    font-size: 22px;
+    transition: transform 0.3s ease;
+}
+
+.linkedin-btn:hover span {
+    transform: translate(3px, -3px);
+}
+
+/* BARRE DE NAVIGATION */
+
+/* TITRE DU BIEN */
+
+.sidebar h2 {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+/* LIENS DU MENU */
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+/* EFFET AU SURVOL */
+
+.sidebar a:hover {
+    background-color: #333;
+    color: #66b3ff;
+}
+
+/* DÉCALAGE DU CONTENU */
+
+body {
+    padding-left: 220px;
+}
+
+/* DÉFILEMENT FLUIDE */
+
+html {
+    scroll-behavior: smooth;
+}
+/*faire ressortir les projets*/
+.realisation {
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.realisation:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+/*tendre le barre de nav plus agréable*/
+.sidebar a:hover,
+.sidebar a:focus-visible {
+    background-color: #2563eb;
+    color: white;
+    transform: translateX(4px);
+}
+/*rendre l'ecriture plus éspacé*/
+p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.section .boxed {
+    padding-left: 25px;
+    padding-right: 25px;
+    box-sizing: border-box;
+}
+
+/* BOUTON CV */
+
+.bouton-cv {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 28px;
+
+    background-color: #2563eb;
+    color: white;
+
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+/* EFFET AU SURVOL */
+
+.bouton-cv:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
+}
